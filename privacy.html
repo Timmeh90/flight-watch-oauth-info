@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flight Watch Privacy Policy</title>
+<meta name="description" content="Privacy Policy for Flight Watch, a personal desktop app that reads Gmail price alerts with read-only access.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="brand">Flight Watch</div>
+<nav aria-label="Main">
+<a href="index.html">Home</a>
+<a href="privacy.html" aria-current="page">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+</nav>
+</header>
+<main>
+<h1>Privacy Policy</h1>
+<p class="note">Last updated: 2026-11-11</p>
+<p>Flight Watch is a personal, non-commercial desktop application run by an individual on their own computer. This policy explains what the application does with Google user data.</p>
+
+<h2>Access requested from Google</h2>
+<p>The application requests a single Google permission: read-only access to Gmail (<code>https://www.googleapis.com/auth/gmail.readonly</code>). It requests nothing broader, and it refuses to operate with a broader permission.</p>
+
+<h2>Why the access is needed</h2>
+<p>The only purpose is to recognize and process flight price alerts that the user has directed to a specific Gmail label. The application lists messages that carry that label and downloads those messages so it can read the price information in them. It does not read messages without that label.</p>
+
+<h2>What the application does not do</h2>
+<ul>
+<li>It does not send, reply to, modify, label, archive or delete any email.</li>
+<li>It does not open attachments and does not follow links or load images in emails.</li>
+<li>It does not sell personal data.</li>
+<li>It does not share data with advertising networks or use it for advertising.</li>
+<li>It does not use Google user data to train artificial-intelligence or machine-learning models.</li>
+<li>It does not use cookies, analytics or tracking, and neither does this website.</li>
+</ul>
+
+<h2>Where data is processed and stored</h2>
+<ul>
+<li>Email content is processed locally on the user's own computer. The application has no server of its own.</li>
+<li>For each processed message, the application stores locally: the sender domain and display name, the subject, the sent date, a content hash, a short text excerpt (up to 2,000 characters), and the flight-price information extracted from it (such as route, dates and price). This is kept in a local database file on the user's computer.</li>
+<li>The OAuth credentials that let the application read Gmail are stored in the operating system's secure credential store (macOS Keychain) on the user's computer. The access token is held only in memory.</li>
+<li>Flight price lookups use a separate third-party flight price service. Those requests contain only search details such as airports and dates. They do not contain Gmail data.</li>
+<li>Flight-price information derived from alerts may appear in notifications shown to the user on their own computer or sent to a personal notification channel that the user has configured. Raw email content is not forwarded to anyone.</li>
+</ul>
+
+<h2>Compliance with Google API Services User Data Policy</h2>
+<p>Flight Watch's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes">Google API Services User Data Policy</a>, including the Limited Use requirements. Gmail data is used only to provide the user-facing flight price alert feature described above, and humans do not read it except as the user does on their own computer.</p>
+
+<h2>Revoking access and deleting data</h2>
+<ul>
+<li><strong>Revoke access:</strong> the Google account holder can withdraw access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> by selecting Flight Watch and choosing to remove access.</li>
+<li><strong>Remove stored credentials:</strong> the application has a command that deletes its Gmail credentials from the Keychain.</li>
+<li><strong>Delete local data:</strong> because all data is held locally, deleting the application's local database file and data folder from the computer removes it.</li>
+</ul>
+
+<h2>Contact and changes</h2>
+<p>Questions can be raised through the issue tracker of the public repository that hosts this website: <a href="https://github.com/Timmeh90/flight-watch-oauth-info/issues">github.com/Timmeh90/flight-watch-oauth-info/issues</a>. If this policy changes, the updated version and date will be published on this page.</p>
+</main>
+<footer>Flight Watch is a personal, non-commercial project. This site is static: no cookies, no analytics, no forms.</footer>
+</body>
+</html>
